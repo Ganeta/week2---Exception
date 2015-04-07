@@ -1,0 +1,20 @@
+package exception;
+
+public class UncheckedRuntimeException extends RuntimeException{
+    public UncheckedRuntimeException (String m){
+        super(m);
+        
+    }
+    
+ 
+    public static void main(String[] args) {
+        try{
+            throw new UncheckedRuntimeException("My exception");
+        }catch(RuntimeException e){
+            System.out.println(e.getMessage());
+        }
+       
+
+    }
+
+}
