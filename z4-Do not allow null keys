@@ -1,0 +1,22 @@
+package exception;
+
+import java.util.HashMap;
+
+public class NotAllowNullKeys extends HashMap {
+
+    @Override
+    public Object put(Object key, Object value) {
+        if (key == null) {
+            throw new IllegalArgumentException("Don't put null!");
+        }
+        return super.put(key, value);
+    }
+
+    public static void main(String[] args) {
+        
+        NotAllowNullKeys test = new NotAllowNullKeys();
+        System.out.println(test.put(null, 0));
+
+    }
+
+}
